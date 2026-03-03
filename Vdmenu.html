@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Beverage Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- PHẦN HEADER (chuẩn hóa, giữ giỏ hàng, đồng bộ bố cục) -->
+    <header>
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: center; gap: 14px;">
+                <a href="index.html"><img src="images/Logo.jpg" alt="Logo quán" class="site-logo"></a>
+                <span class="site-name">CHILLLY</span>
+            </div>
+            <nav style="flex: 1; display: flex; justify-content: center;">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Vdmenu.html">Product</a></li>
+                    <li><a href="VdIntroduce.html">Introduce</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="cart-dropdown">
+                    <a href="#" class="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <div class="cart-dropdown-menu">
+                        <div class="cart-items"></div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span class="total-price">0 ₫</span>
+                        </div>
+                        <a href="#" class="view-cart-btn">Order</a>
+                    </div>
+                </div>
+                <!-- PHẦN NGƯỜI DÙNG / ĐĂNG NHẬP BẮT ĐẦU -->
+                <div class="user-dropdown">
+                    <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="Vdprofile.html" class="dropdown-item" id="nav-profile" style="display: none;">Account</a>
+                        <a href="Vdlogin.html" class="dropdown-item" id="nav-login">Log in</a>
+                        <a href="Vdregister.html" class="dropdown-item" id="nav-register">Register</a>
+                        <a href="#" class="dropdown-item" id="nav-logout" style="display: none;">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- PHẦN TẤT CẢ SẢN PHẨM (giữ nguyên như index.html) -->
+        <section class="product-section" id="all-products">
+            <div class="container">
+                <h2 class="section-title">Product</h2>
+
+                <!-- SEARCH BAR -->
+                <div class="search-bar-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="product-search-input" placeholder="Search by product name...">
+                </div>
+
+                <div class="product-grid all-products-grid">
+                    <!-- Hàng 1 (5 sản phẩm) -->
+                    <div class="product-card" data-description="Rich Robusta coffee blends with sweet condensed milk, creating an irresistible traditional flavor.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/CafeSua.jpg" alt="Cà phê sữa">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Coffee with milk</h3>
+                        <p class="price">35.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="The perfect combination of rich milk tea with three types of toppings: black pearls, egg pudding and grass jelly.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/TraBaAnhEm.jpg" alt="Trà sữa ba anh em">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Three brothers milk tea</h3>
+                        <p class="price">60.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="For coffee connoisseurs, brewed from 100% pure Robusta beans, preserving the rich bitter taste and characteristic aroma.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/CafeDen.jpg" alt="cà phê đen">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Black coffee</h3>
+                        <p class="price">45.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" id="product-cafe-trung-vit-lon" data-description="The rich flavor of whipped egg yolks blends with strong coffee to create a delicious, nutritious drink.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/Cafevitlon.jpg" alt="cà phê trứng vịt lộn">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Balut coffee</h3>
+                        <p class="price">85.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Cool down instantly with this refreshing watermelon smoothie, blended from juicy watermelons, with no added sugar.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/SinhToDuaHau.jpg" alt="sinh tố dưa hấu">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>watermelon smoothie</h3>
+                        <p class="price">40.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <!-- Hàng 2 (5 sản phẩm) -->
+                    <div class="product-card" data-description="Refreshing and healthy, with crunchy fresh aloe vera pieces in a smooth smoothie base.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/Nhadam.jpg" alt="sinh tố nha đam">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Aloe vera smoothie</h3>
+                        <p class="price">65.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" id="product-sinh-to-nha-dam" data-description="Traditional milk tea flavor, strong tea flavor, rich milk flavor, is a choice that never goes out of style.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/TraSua.jpg" alt="trà sữa">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Milk tea</h3>
+                        <p class="price">40.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Smooth, creamy avocado smoothie made from fresh, delicious avocados is a nutritious thirst quencher.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/SinhToBo.jpg" alt="sinh tố bơ">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Avocado smoothie</h3>
+                        <p class="price">30.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" id="product-tra-sua-matcha" data-description="The fragrant, slightly bitter Japanese matcha green tea flavor blends perfectly with rich fresh milk.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/Matcha.jpg" alt="trà sữa matcha">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Matcha milk tea </h3>
+                        <p class="price">50.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="The sweet aroma of fresh peaches, blended with ice, creates a wonderful thirst quencher.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/SinhToDao.jpg" alt="trà chanh">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Peach smoothie</h3>
+                        <p class="price">75.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <!-- Hàng 3 (5 sản phẩm) -->
+                    <div class="product-card" data-description="Rich black tea combined with rich fresh milk and delicious chewy black pearls.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/HongTraSua.jpg" alt="Cà phê sữa">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Black milk tea</h3>
+                        <p class="price">35.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Premium Oolong tea is cold brewed to retain its delicate aroma, combined with unsweetened fresh milk.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/OLong.jpg" alt="Trà sữa ba anh em">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Oolong Milk Tea</h3>
+                        <p class="price">60.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Natural, refreshing jasmine scent, mixed with the gentle, delicate flavor of milk tea.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/TraSuaNhai.jpg" alt="cà phê đen">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Jasmine milk tea</h3>
+                        <p class="price">45.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Red beans are simmered until soft, sweet and rich, combined with traditional milk tea to create an unforgettable flavor.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/TraSuaDauDo.jpg" alt="cà phê trứng vịt lộn">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Red bean milk tea</h3>
+                        <p class="price">85.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="The most expensive and unique coffee in the world, with a strong aroma, mild bitterness and sweet aftertaste.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/Chon.jpg" alt="sinh tố dưa hấu">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Weasel coffee</h3>
+                        <p class="price">40.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <!-- Hàng 4 (5 sản phẩm) -->
+                    <div class="product-card" data-description="The combination of espresso, chocolate sauce, fresh milk and strawberry jam creates a sweet, seductive flavor.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/CafeDauTay.jpg" alt="sinh tố nha đam">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Strawberry mocha coffee</h3>
+                        <p class="price">65.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Fresh passion fruit blended with ice creates a sweet and sour, refreshing drink rich in vitamin C.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/Chanhleo.jpg" alt="trà sữa">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Passion fruit smoothie</h3>
+                        <p class="price">40.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Fresh soursop flesh is pureed with condensed milk and ice, creating a delicious, characteristic sweet and sour smoothie.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/SinhToMangCau.jpg" alt="sinh tố bơ">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Soursop smoothie</h3>
+                        <p class="price">30.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="The nutritious duo of creamy avocado and sweet ripe banana provides energy for a long day.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/BoChuoi.jpg" alt="trà sữa matcha">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Avocado banana smoothie</h3>
+                        <p class="price">50.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                    <div class="product-card" data-description="Fresh tomatoes are finely ground, retaining all vitamins and minerals, making it a great drink for the skin.">
+                        <div class="product-img-wrapper" style="position:relative;">
+                            <img src="images/CaChua.jpg" alt="trà chanh">
+                            <button class="add-to-cart-btn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;">Add to cart</button>
+                        </div>
+                        <h3>Tomato smoothie</h3>
+                        <p class="price">75.000 ₫</p>
+                        <a href="#" class="description">Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- PHẦN FOOTER (giữ nguyên như index.html) -->
+    <footer id="footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>Về chúng tôiAbout us</h4>
+                <p>Delicious Drinks provides fresh, high quality drinks with natural ingredients.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Promotion</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact information</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyen Hue, District 1, Ho Chi Minh City</li>
+                    <li><i class="fas fa-phone-alt"></i>0987 654 321</li>
+                    <li><i class="fas fa-envelope"></i> info@douongngon.vn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Sign up for news</h4>
+                <p>Get information on promotions and new products</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email của bạn">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="product-detail-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modal-product-img" src="" alt="Product Image">
+            <h3 id="modal-product-name"></h3>
+            <p id="modal-product-description"></p>
+        </div>
+    </div>
+
+    <script src="Vdjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverage shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- PHẦN HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: center; gap: 14px;">
+                <a href="index.html"><img src="images/Logo.jpg" alt="Logo quán" class="site-logo"></a>
+                <span class="site-name">CHILLLY</span>
+            </div>
+            
+            <!-- Thanh điều hướng -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Vdmenu.html">Product</a></li>
+                    <li><a href="VdIntroduce.html">Introduce</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Biểu tượng giỏ hàng & tài khoản -->
+            <div class="header-icons">
+                <!-- Menu tài khoản người dùng START -->
+                <div class="user-dropdown">
+                    <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="Vdprofile.html" class="dropdown-item" id="nav-profile" style="display: none;">Account</a>
+                        <a href="Vdlogin.html" class="dropdown-item" id="nav-login">Log in</a>
+                        <a href="Vdregister.html" class="dropdown-item" id="nav-register">Register</a>
+                        <a href="#" class="dropdown-item" id="nav-logout" style="display: none;">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- PHẦN BANNER -->
+        <section class="hero-banner">
+            <img src="images/Banner.jpg" alt="Banner đồ uống">
+        </section>
+
+        <!-- SẢN PHẨM BÁN CHẠY -->
+        <section class="product-section">
+            <div class="container">
+                <h2 class="section-title">Best selling</h2>
+                <div class="custom-featured-list">
+                    <a href="Vdmenu.html#product-cafe-trung-vit-lon" style="text-decoration:none;color:inherit;">
+                    <div class="intro-row">
+                        <img src="images/Cafevitlon.jpg" alt="Cà phê trứng vịt lộn" class="intro-image">
+                        <div>
+                            <h2 class="intro-title">Balut coffee</h2>
+                            <p class="intro-text">45.000 ₫</p>
+                            <p class="intro-text">The rich flavor of roasted coffee blends with whipped duck egg yolk, creating a rich, energetic, and unforgettable drink.</p>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="Vdmenu.html#product-tra-sua-matcha" style="text-decoration:none;color:inherit;">
+                    <div class="intro-row intro-row-reverse">
+                        <img src="images/Matcha.jpg" alt="Trà sữa matcha" class="intro-image">
+                        <div>
+                            <h2 class="intro-title">Matcha milk tea</h2>
+                            <p class="intro-text">65.000 ₫</p>
+                            <p class="intro-text">Premium matcha is carefully selected from Japanese tea leaves, finely ground and mixed with fragrant fresh milk, producing a smooth, fragrant cup of matcha milk tea - naturally sweet.</p>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="Vdmenu.html#product-sinh-to-nha-dam" style="text-decoration:none;color:inherit;">
+                    <div class="intro-row">
+                        <img src="images/Nhadam.jpg" alt="Sinh tố nha đam" class="intro-image">
+                        <div>
+                            <h2 class="intro-title">Aloe Vera Smoothie</h2>
+                            <p class="intro-text">80.000 ₫</p>
+                            <p class="intro-text">Made from hand-cut fresh aloe vera, combined with refreshing fruits such as pineapple, mango, and natural juice, this smoothie is not only delicious but also rich in vitamins, helps cool the body and beautify the skin. Each sip is cool, slightly sweet, and crunchy with aloe vera - guaranteed to be "worth every penny".</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TẤT CẢ SẢN PHẨM -->
+        <section class="product-section" id="all-products-section">
+            <div class="container">
+                <h2 class="section-title">Menu</h2>
+                <img class="menu-image" src="images/Menu.jpg" alt="Menu sản phẩm">
+            </div>
+        </section>
+    </main>
+
+    <!-- PHẦN SALE -->
+        <section class="sale-section">
+            <div class="container">
+                <h2 class="section-title">Special offer</h2>
+                <div class="sale-banner">
+                    <div class="sale-item">
+                        <img src="images/Giamgia1.jpg" alt="Sale 50%">
+                    </div>
+                    <div class="sale-item">
+                        <img src="images/Giamgia2.jpg" alt="Mua 1 tặng 1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN FEEDBACK -->
+        <section class="feedback-section">
+            <div class="container">
+                <h2 class="section-title">What our customers say about us</h2>
+                <div class="feedback-grid">
+                    <div class="feedback-card">
+                        <div class="customer-info">
+                            <img src="images/AvtJack.jpg" alt="Khách hàng 1" class="customer-avatar">
+                            <div>
+                                <h4>Trình Trần Phương Tuấn</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="feedback-text">"The milk tea here is amazing, rich and flavorful. The staff is very friendly and helpful."</p>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="customer-info">
+                            <img src="images/Avtdom.jpg" alt="Khách hàng 2" class="customer-avatar">
+                            <div>
+                                <h4>Đom Đóm mất đèn</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="feedback-text">"I really like the coffee here, good quality and reasonable price. Will come back to support the shop regularly."</p>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="customer-info">
+                            <img src="images/AvtViruss.jpg" alt="Khách hàng 3" class="customer-avatar">
+                            <div>
+                                <h4>Hẹn hò nhưng không yêu</h4> 
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="feedback-text">"The avocado smoothie here is the best I've ever had, rich and fragrant. The space is also very comfortable and clean."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- PHẦN FOOTER: Chân trang -->
+    <footer id="footer">
+        <div class="container footer-grid">
+            <!-- Cột 1: Giới thiệu -->
+            <div class="footer-column">
+                <h4>About us</h4>
+                <p>Delicious Drinks provides fresh, high quality drinks with natural ingredients.</p>
+                <div class="social-icons">
+                    <!-- Icon mạng xã hội -->
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- Cột 2: Liên kết nhanh -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Promotion</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Cột 3: Thông tin liên hệ -->
+            <div class="footer-column">
+                <h4>Contact information</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyen Hue, District 1, Ho Chi Minh City</li>
+                    <li><i class="fas fa-phone-alt"></i> 0987 654 321</li>
+                    <li><i class="fas fa-envelope"></i> info@douongngon.vn</li>
+                </ul>
+            </div>
+            <!-- Cột 4: Form đăng ký nhận tin -->
+            <div class="footer-column">
+                <h4>Sign up for news</h4>
+                <p>Get information on promotions and new products</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email của bạn">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="Vdjs.js"></script> 
+</body>
+</html>

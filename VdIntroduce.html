@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Introduction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body class="intro-page">
+    <!-- PHẦN HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: center; gap: 14px;">
+                <a href="index.html"><img src="images/Logo.jpg" alt="Logo quán" class="site-logo"></a>
+                <span class="site-name">CHILLLY</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Vdmenu.html">Product</a></li>
+                    <li><a href="VdIntroduce.html">Introduce</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <!-- PHẦN NGƯỜI DÙNG / ĐĂNG NHẬP BẮT ĐẦU -->
+                <div class="user-dropdown">
+                    <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="Vdprofile.html" class="dropdown-item" id="nav-profile" style="display: none;">Account</a>
+                        <a href="Vdlogin.html" class="dropdown-item" id="nav-login">Log in</a>
+                        <a href="Vdregister.html" class="dropdown-item" id="nav-register">Register</a>
+                        <a href="#" class="dropdown-item" id="nav-logout" style="display: none;">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container" style="margin-top: 40px; margin-bottom: 40px;">
+            <!-- Hàng 1: Ảnh trái, nội dung phải -->
+            <div class="intro-row">
+                <img src="images/QuanCafe.jpg" alt="Giới thiệu 1" class="intro-image">
+                <div>
+                    <h2 class="intro-title">Welcome to CHILLLY – the destination for drink lovers!</h2>
+                    <p class="intro-text">Here, you will find fragrant milk teas, rich coffees, fresh smoothies and refreshing lemon teas, all made with fresh ingredients and full of passion.
+                        More than just drinks, CHILLLY also offers a relaxing space where you can chat, work, or simply spend time for yourself.</p>
+                </div>
+            </div>
+            <!-- Hàng 2: Nội dung trái, ảnh phải -->
+            <div class="intro-row intro-row-reverse" style="position: relative;">
+                <img src="images/Damme.jpg" alt="Giới thiệu 2" class="intro-image">
+                <div>
+                    <h2 class="intro-title">From passion to reality – CHILLLY's journey</h2>
+                    <p class="intro-text">started from the desire to create a friendly and close place, where people can enjoy a delicious drink together and share everyday stories. We believe that a delicious drink does not only come from the recipe, but also from the heart of the bartender.</p>
+                </div>
+            </div>
+            <!-- Hàng 3: Ảnh trái, nội dung phải -->
+            <div class="intro-row position-relative">
+                <img src="images/Hoaqua.jpg" alt="Giới thiệu 3" class="intro-image">
+                <div>
+                    <h2 class="intro-title">Fresh ingredients – Drink with confidence</h2>
+                    <p class="intro-text">We use fresh fruit every day, pure tea leaves, clean coffee, and carefully controlled toppings. Every step is done by hand to preserve the full flavor and no preservatives are used – ensuring every glass is absolutely safe and delicious.</p>
+                </div>
+            </div>
+            <!-- Hàng 4: Nội dung trái, ảnh phải -->
+            <div class="intro-row intro-row-reverse">
+                <img src="images/KhachHang.jpg" alt="Khách hàng hài lòng" class="intro-image">
+                <div>
+                    <h2 class="intro-title">For You – Whoever You Are</h2>
+                    <p class="intro-text">Whether you are a student who needs a place to study in groups, an office worker who wants to relax, or a young person who wants to "live virtual" with friends - CHILLLY is always ready to welcome you. With reasonable prices, dedicated service and a youthful space, you will always feel comfortable every time you visit.</p>
+                </div>
+            </div>
+            <div class="intro-summary">
+                <h2>Come and feel the difference!</h2>
+                <p>
+                    ""Take a sip, chill all day" - that's how we want you to feel when you step into our shop.<br>
+                    Let CHILLLY become a small part of your day, where you find energy, inspiration and joy from the simplest things..<br>
+                    <b class="intro-summary-bottom">Come visit and become part of the CHILLLY family!</b>
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- PHẦN FOOTER -->
+    <footer id="footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>About us</h4>
+                <p>Delicious Drinks provides fresh, high quality drinks with natural ingredients.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#all-products">Product</a></li>
+                    <li><a href="#">Promotion</a></li>
+                    <li><a href="VdIntroduce.html">About us</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact information</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyen Hue, District 1, Ho Chi Minh City</li>
+                    <li><i class="fas fa-phone-alt"></i> 0987 654 321</li>
+                    <li><i class="fas fa-envelope"></i> info@douongngon.vn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Sign up for news</h4>
+                <p>Get information on promotions and new products</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email của bạn">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="Vdjs.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- PHẦN HEADER -->
+    <header>
+        <div class="container">
+            <!-- LOGO -->
+            <div class="logo" style="display: flex; align-items: center; gap: 14px;">
+                <a href="index.html"><img src="images/Logo.jpg" alt="Logo quán" class="site-logo"></a>
+                <span class="site-name">CHILLLY</span>
+            </div>
+
+            <!-- THANH ĐIỀU HƯỚNG NAVIGATION -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#all-products">Product</a></li>
+                    <li><a href="VdIntroduce.html">Introduce</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+
+              <!-- ICONS BÊN PHẢI HEADER (GIỎ HÀNG + NGƯỜI DÙNG) -->
+            <div class="header-icons">
+                <!-- KHỐI NGƯỜI DÙNG DROPDOWN -->
+                <div class="user-dropdown">
+                    <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="Vdprofile.html" class="dropdown-item" id="nav-profile" style="display: none;">Account</a>
+                        <a href="Vdlogin.html" class="dropdown-item" id="nav-login">Log in</a>
+                        <a href="Vdregister.html" class="dropdown-item" id="nav-register">Register</a>
+                        <a href="#" class="dropdown-item" id="nav-logout" style="display: none;">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PHẦN NỘI DUNG CHÍNH: FORM ĐĂNG NHẬP -->
+    <main class="auth-container">
+        <div class="auth-form">
+            <h2>Log in</h2>
+            <!-- FORM ĐĂNG NHẬP -->
+            <form id="loginForm">
+                <!-- NHẬP EMAIL -->
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                 <!-- NHẬP MẬT KHẨU -->
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                 <!-- LỰA CHỌN GHI NHỚ & QUÊN MẬT KHẨU -->
+                <div class="form-options">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember-me" name="remember">
+                        <label for="remember-me">Remember login</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <!-- NÚT ĐĂNG NHẬP -->
+                <button type="submit" class="auth-btn">Log in</button>
+            </form>
+            <!-- PHẦN CHÂN FORM: ĐĂNG KÝ VÀ MẠNG XÃ HỘI -->
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="Vdregister.html">Sign up now</a></p>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- PHẦN FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <!-- CỘT 1: GIỚI THIỆU -->
+            <div class="footer-column">
+                <h4>About us</h4>
+                <p>Delicious Drinks provides fresh, high quality drinks with natural ingredients.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- CỘT 2: LIÊN KẾT NHANH -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#all-products">Product</a></li>
+                    <li><a href="index.html#sale-section">Promotion</a></li>
+                    <li><a href="VdIntroduce.html">About us</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+            <!-- CỘT 3: THÔNG TIN LIÊN HỆ -->
+            <div class="footer-column">
+                <h4>Contact information</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyen Hue, District 1, Ho Chi Minh City</li>
+                    <li><i class="fas fa-phone-alt"></i> 0987 654 321</li>
+                    <li><i class="fas fa-envelope"></i> info@douongngon.vn</li>
+                </ul>
+            </div>
+            <!-- CỘT 4: ĐĂNG KÝ NHẬN TIN -->
+            <div class="footer-column">
+                <h4>Sign up for news</h4>
+                <p>Get information on promotions and new products</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email của bạn">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOM ALERT MODAL -->
+    <div id="customAlert" class="custom-alert-overlay">
+        <div class="custom-alert-box">
+            <div class="custom-alert-icon"></div>
+            <h3 id="customAlertTitle" class="custom-alert-title"></h3>
+            <p id="customAlertMessage" class="custom-alert-message"></p>
+            <button id="customAlertBtn" class="custom-alert-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="Vdjs.js"></script>
+    <script src="Vdlogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal account - CHILLLY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- PHẦN HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: center; gap: 14px;">
+                <a href="index.html"><img src="images/Logo.jpg" alt="Logo quán" class="site-logo"></a>
+                <span class="site-name">CHILLLY</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Vdmenu.html">Product</a></li>
+                    <li><a href="VdIntroduce.html">Introduce</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="user-dropdown">
+                    <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="Vdprofile.html" class="dropdown-item" id="nav-profile" style="display: none;">Account</a>
+                        <a href="Vdlogin.html" class="dropdown-item" id="nav-login">Log in</a>
+                        <a href="Vdregister.html" class="dropdown-item" id="nav-register">Register</a>
+                        <a href="#" class="dropdown-item" id="nav-logout" style="display: none;">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <!-- Profile Header Section -->
+            <div class="profile-hero">
+                <div class="profile-hero-bg"></div>
+                <div class="profile-hero-content">
+                    <div class="profile-avatar-container">
+                        <div class="profile-avatar-wrapper">
+                            <img src="c:/Users/ASUS/OneDrive/Pictures/Screenshots/675069946068c753eccdf964533d58aa.jpg" alt="Avatar" class="profile-avatar" id="profile-avatar">
+                            <div class="avatar-overlay">
+                                <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                                <button class="avatar-upload-btn" onclick="document.getElementById('avatar-input').click()">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name" id="profile-name"></h1>
+                        <p class="profile-email" id="profile-email"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="personal">
+                        <i class="fas fa-user"></i>
+                        <span>Personal information</span>
+                    </button>
+                    <button class="tab-btn" data-tab="security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </button>
+                    <button class="tab-btn" data-tab="preferences">
+                        <i class="fas fa-cog"></i>
+                        <span>Options</span>
+                    </button>
+                </div>
+
+                <!-- Personal Information Tab -->
+                <div class="tab-content active" id="personal">
+                    <div class="form-card">
+                        <div class="form-card-header">
+                            <h3><i class="fas fa-user-circle"></i> Personal information</h3>
+                            <p>Update your personal information</p>
+                        </div>
+                        <form class="profile-form" id="personal-form">
+                            <div class="form-section">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">
+                                            <i class="fas fa-user"></i>
+                                            First and middle name
+                                        </label>
+                                        <input type="text" id="first-name" name="firstName" value="Trình Trần Phương" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">
+                                            <i class="fas fa-user"></i>
+                                            Name
+                                        </label>
+                                        <input type="text" id="last-name" name="lastName" value="Tuấn" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">
+                                            <i class="fas fa-envelope"></i>
+                                            Email
+                                        </label>
+                                        <input type="email" id="email" name="email" value="tuan.trinh@example.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">
+                                            <i class="fas fa-phone"></i>
+                                            Phone number
+                                        </label>
+                                        <input type="tel" id="phone" name="phone" value="0987 654 321" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="birthday">
+                                            <i class="fas fa-birthday-cake"></i>
+                                            Date of birth
+                                        </label>
+                                        <input type="date" id="birthday" name="birthday" value="1995-06-15">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender">
+                                            Gender 
+                                        </label>
+                                        <select id="gender" name="gender">
+                                            <option value="male" selected>Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <div class="section-header">
+                                    <h4><i class="fas fa-map-marker-alt"></i> Shipping address</h4>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">
+                                        <i class="fas fa-home"></i>
+                                        Address
+                                    </label>
+                                    <input type="text" id="address" name="address" value="123 Nguyễn Huệ, Quận 1" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">
+                                            <i class="fas fa-city"></i>
+                                            City
+                                        </label>
+                                        <input type="text" id="city" name="city" value="TP. Hồ Chí Minh" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="district">
+                                            <i class="fas fa-map"></i>
+                                            District
+                                        </label>
+                                        <input type="text" id="district" name="district" value="Quận 1" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes">
+                                        <i class="fas fa-sticky-note"></i>
+                                        Address Note
+                                    </label>
+                                    <textarea id="notes" name="notes" placeholder="Delivery instructions, buildings, apartments...">Tòa nhà A, căn hộ 15B</textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Security Tab -->
+                <div class="tab-content" id="security">
+                    <div class="form-card">
+                        <div class="form-card-header">
+                            <h3><i class="fas fa-shield-alt"></i> Account Security</h3>
+                            <p>Protect your account by updating your password.</p>
+                        </div>
+                        <form class="profile-form" id="security-form">
+                            <div class="form-section">
+                                <div class="form-group password-group">
+                                    <label for="current-password">
+                                        Current Password
+                                    </label>
+                                    <input type="password" id="current-password" name="currentPassword">
+                                </div>
+                                <div class="form-group password-group">
+                                    <label for="new-password">
+                                        New Password
+                                    </label>
+                                    <input type="password" id="new-password" name="newPassword">
+                                </div>
+                                <div class="form-group password-group">
+                                    <label for="confirm-password">
+                                        Confirm new password
+                                    </label>
+                                    <input type="password" id="confirm-password" name="confirmPassword">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Preferences Tab -->
+                <div class="tab-content" id="preferences">
+                    <div class="form-card">
+                        <div class="form-card-header">
+                            <h3><i class="fas fa-cog"></i> Options</h3>
+                            <p>Customize your user experience</p>
+                        </div>
+                        <form class="profile-form" id="preferences-form">
+                            <div class="form-section">
+                                <div class="preferences-grid">
+                                    <div class="preference-item">
+                                        <div class="preference-content">
+                                            <div class="preference-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div class="preference-info">
+                                                <h4>Email Notification</h4>
+                                                <p>Receive promotions and updates via email</p>
+                                            </div>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="preference-item">
+                                        <div class="preference-content">
+                                            <div class="preference-icon">
+                                                <i class="fas fa-sms"></i>
+                                            </div>
+                                            <div class="preference-info">
+                                                <h4>SMS Notification</h4>
+                                                <p>Receive order and promotion notifications via SMS</p>
+                                            </div>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" id="sms-notifications" name="smsNotifications">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="preference-item">
+                                        <div class="preference-content">
+                                            <div class="preference-icon">
+                                                <i class="fas fa-bell"></i>
+                                            </div>
+                                            <div class="preference-info">
+                                                <h4>Push Notifications</h4>
+                                                <p>Get notifications directly on your browser</p>
+                                            </div>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" id="push-notifications" name="pushNotifications">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="profile-actions">
+                    <button type="button" class="btn btn-danger" onclick="deleteAccount()">
+                        <i class="fas fa-trash"></i>
+                        <span>Delete account</span>
+                    </button>
+                    <button type="submit" class="btn btn-primary" onclick="saveChanges()">
+                        <i class="fas fa-save"></i>
+                        <span>Save changes</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PHẦN FOOTER: Chân trang -->
+    <footer id="footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>About us</h4>
+                <p>Delicious Drinks provides fresh, high quality drinks with natural ingredients.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Promotion</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact information</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyen Hue, District 1, Ho Chi Minh City</li>
+                    <li><i class="fas fa-phone-alt"></i> 0987 654 321</li>
+                    <li><i class="fas fa-envelope"></i> info@douongngon.vn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Sign up for news</h4>
+                <p>Get information on promotions and new products</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email của bạn">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: Yêu cầu điền thông tin cá nhân -->
+    <div id="completeProfileModal" style="display:none;position:fixed;z-index:2000;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);justify-content:center;align-items:center;">
+        <div style="background:#fff;padding:32px 24px;border-radius:12px;max-width:350px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.15);">
+            <h3 style="margin-bottom:16px;color:#b85c38;">Add personal informationn</h3>
+            <p style="margin-bottom:24px;">Please fill in your personal information to fully utilize the account functions.</p>
+            <button id="completeProfileBtn" style="background:#b85c38;color:#fff;padding:10px 32px;border:none;border-radius:6px;font-size:16px;cursor:pointer;">Ok</button>
+        </div>
+    </div>
+
+    <!-- CUSTOM ALERT MODAL -->
+    <div id="customAlert" class="custom-alert-overlay" style="z-index: 2001;">
+        <div class="custom-alert-box">
+            <div class="custom-alert-icon"></div>
+            <h3 id="customAlertTitle" class="custom-alert-title"></h3>
+            <p id="customAlertMessage" class="custom-alert-message"></p>
+            <button id="customAlertBtn" class="custom-alert-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="Vdjs.js"></script>
+    <script src="Vdprofile.js"></script>
+</body>
+</html> 

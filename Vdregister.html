@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up for an account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- PHẦN HEADER -->
+    <header>    
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: center; gap: 14px;">
+                <a href="index.html"><img src="images/Logo.jpg" alt="Logo quán" class="site-logo"></a>
+                <span class="site-name">CHILLLY</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Vdmenu.html">Product</a></li>
+                    <li><a href="VdIntroduce.html">Introduce</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- PHẦN ICON HEADER (GIỎ HÀNG + NGƯỜI DÙNG) BẮT ĐẦU -->
+            <div class="header-icons">
+                <!-- PHẦN NGƯỜI DÙNG / ĐĂNG NHẬP BẮT ĐẦU -->
+                <div class="user-dropdown">
+                    <a href="#" class="user-icon"><i class="fa-solid fa-user"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="Vdprofile.html" class="dropdown-item" id="nav-profile" style="display: none;">Account</a>
+                        <a href="Vdlogin.html" class="dropdown-item" id="nav-login">Log in</a>
+                        <a href="Vdregister.html" class="dropdown-item" id="nav-register">Register</a>
+                        <a href="#" class="dropdown-item" id="nav-logout" style="display: none;">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- PHẦN ĐĂNG KÝ TÀI KHOẢN BẮT ĐẦU -->
+    <main class="auth-container">
+        <div class="auth-form">
+            <h2>Sign up for an account</h2>
+            <form id="registerForm">
+                <!-- FORM NHẬP HỌ TÊN -->
+                <div class="form-group">
+                    <label for="reg-name">Full name</label>
+                    <input type="text" id="reg-name" name="name" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <!-- FORM NHẬP EMAIL -->
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <!-- FORM NHẬP SỐ ĐIỆN THOẠI -->
+                <div class="form-group">
+                    <label for="reg-phone">Phone number</label>
+                    <input type="tel" id="reg-phone" name="phone" required>
+                    <i class="fas fa-phone"></i>
+                </div>
+                <!-- FORM NHẬP MẬT KHẨU -->
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <!-- FORM XÁC NHẬN MẬT KHẨU -->
+                <div class="form-group">
+                    <label for="reg-confirm-password">Re-enter password</label>
+                    <input type="password" id="reg-confirm-password" name="confirm_password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <!-- NÚT ĐĂNG KÝ -->
+                <button type="submit" class="auth-btn">Register</button>
+            </form>
+            <!-- PHẦN CHÂN FORM ĐĂNG KÝ -->
+            <div class="auth-footer">
+                <p>Have an account? <a href="Vdlogin.html">Sign in now</a></p>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- PHẦN FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <!-- CỘT VỀ CHÚNG TÔI -->
+            <div class="footer-column">
+                <h4>About us</h4>
+                <p>Delicious Drinks provides fresh, high quality drinks with natural ingredients.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- CỘT LIÊN KẾT NHANH -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#all-products">Product</a></li>
+                    <li><a href="index.html#sale-section">Promotion</a></li>
+                    <li><a href="VdIntroduce.html">About us</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+            <!-- CỘT THÔNG TIN LIÊN HỆ -->
+            <div class="footer-column">
+                <h4>Contact information</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyen Hue, District 1, Ho Chi Minh City</li>
+                    <li><i class="fas fa-phone-alt"></i> 0987 654 321</li>
+                    <li><i class="fas fa-envelope"></i> info@douongngon.vn</li>
+                </ul>
+            </div>
+            <!-- CỘT ĐĂNG KÝ NHẬN TIN -->
+            <div class="footer-column">
+                <h4>Sign up for news</h4>
+                <p>Get information on promotions and new products</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Email của bạn">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOM ALERT MODAL -->
+    <div id="customAlert" class="custom-alert-overlay">
+        <div class="custom-alert-box">
+            <div class="custom-alert-icon"></div>
+            <h3 id="customAlertTitle" class="custom-alert-title"></h3>
+            <p id="customAlertMessage" class="custom-alert-message"></p>
+            <button id="customAlertBtn" class="custom-alert-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="Vdjs.js"></script>
+    <script src="Vdregister.js"></script>
+</body>
+</html>
